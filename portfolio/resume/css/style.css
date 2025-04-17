@@ -1,0 +1,180 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: linear-gradient(120deg, #2c3e50, #4ca1af);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background-color: #ffd700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Project Cards */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 25px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Forms */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 14px;
+}
+
+/* Course & Internship Lists */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in;
+}
+
+.course-list, .internship-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-list li, .internship-list li {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px 20px;
+  border-left: 5px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.course-list li:hover, .internship-list li:hover {
+  transform: scale(1.02);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
